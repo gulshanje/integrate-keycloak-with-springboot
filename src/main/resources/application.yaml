@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: Keycloak-mursu
+  security:
+    oauth2:
+      client:
+        registration:
+          keycloak:
+            client-id: spring-boot-kc-client
+            client-secret: GipsAqCqPh9AFNgiyyGnaFfgMTgSFJTm
+            scope: openid
+            authorization-grant-type: authorization_code
+        provider:
+          keycloak:
+            issuer-url: http://localhost:9092/realms/Mursu
+            user-name-attribute: preferred_username
+server:
+  port:
+    9093
